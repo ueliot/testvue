@@ -9,6 +9,14 @@ var app =new Vue({
             console log (`${i}: ${data[i]}`)
             } */
     
-  });
+  })
 
-app.other = "XXXXX";
+  var app2 = new Vue({
+    el: '#app-2',
+    data: {
+      message: 'Usted cargó esta página el ' + new Date().toLocaleString()
+    }
+  })
+
+  app.message="Interesante";
+

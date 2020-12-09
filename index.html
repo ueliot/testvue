@@ -14,7 +14,15 @@
         <p>{{ message }}</p>
         <p>{{other}}</p>
     </div>
-<script src="index.js"></script>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+          Mueva el mouse sobre mí durante unos segundos
+          para ver mi título enlazado dinámicamente.
+        </span>
+      </div>
+
+    <script src="index.js"></script>          
     
 </body>
 </html>
