@@ -20,7 +20,50 @@
           Mueva el mouse sobre mí durante unos segundos
           para ver mi título enlazado dinámicamente.
         </span>
-      </div>
+    </div>
+
+    <div id="app-3">
+        <span v-if="seen">Ahora me ves</span>
+    </div>
+
+    <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+    </div>
+
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Mensaje invertido</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <!-- ##########componets in VUEJS############## -->
+
+    <div id="app-7">
+        <ol>
+          <!--
+            Ahora proporcionamos a cada todo-item con el objeto todo
+            que representa, para que su contenido pueda ser dinámico.
+            También necesitamos proporcionar a cada componente con una "clave",
+            que vamos a explicar más adelante.
+          -->
+          <todo-item
+            v-for="item in groceryList"
+            v-bind:todo="item"
+            v-bind:key="item.id">
+          </todo-item>
+        </ol>
+    </div>
+
+    <!-- ######################################## -->
+      
 
     <script src="index.js"></script>          
     
